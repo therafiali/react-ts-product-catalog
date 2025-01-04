@@ -1,4 +1,3 @@
-// src/components/ProductCatalog.tsx
 import React, { useState } from 'react';
 import { Product } from '../types/Product';
 
@@ -26,7 +25,7 @@ const ProductCatalog: React.FC<ProductCatalogProps> = ({ products }) => {
   };
 
   return (
-    <div className="container w-full mx-auto px-6 py-12 min-h-screen ">
+    <div className="container w-full mx-auto px-6 py-12 min-h-screen">
       {/* Heading */}
       <h1 className="text-5xl font-bold text-center text-white mb-12">Product Catalog</h1>
 
@@ -42,7 +41,7 @@ const ProductCatalog: React.FC<ProductCatalogProps> = ({ products }) => {
       </div>
 
       {/* Category Filter */}
-      <div className="mb-8 text-center">
+      <div className="mb-8 text-center flex flex-wrap gap-4 justify-center items-center">
         <button
           onClick={() => handleCategoryChange('All')}
           className="px-6 py-3 mx-2 text-lg font-semibold text-black bg-white rounded-lg hover:bg-gray-300 focus:outline-none"
@@ -74,7 +73,7 @@ const ProductCatalog: React.FC<ProductCatalogProps> = ({ products }) => {
         {filteredProducts.map(product => (
           <div
             key={product.id}
-            className="bg-white p-6 border border-white rounded-lg shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out"
+            className="bg-white p-6 border border-white rounded-lg shadow-xl hover:border-2 hover:border-gray-700 hover:scale-105 transform transition-all duration-300 ease-in-out"
           >
             <div className="relative w-full h-48 mb-6 overflow-hidden rounded-md">
               {/* Apply filter or adjust image background */}
